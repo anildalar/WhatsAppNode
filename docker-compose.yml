@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  nexus962775454450:
+    image: budtmo/docker-android-x86-7.1.1
+    container_name: c775454450
+    privileged: true
+    scale: 1
+    ports:
+      - '7058:6080'
+      - '2059:4723'
+      - '4059:5554'
+      - '8059:5555'
+    volumes:
+      - $PWD/example/sample_apk:/root/tmp/sample_apk
+      - ./video-nexus_7.1.1:/tmp/video
+    environment:
+      - DEVICE=Nexus 5
+      - CONNECT_TO_GRID=true
+      - APPIUM=true
+      - SELENIUM_HOST=selenium_hub
+      - HTTPS_PROXY=http://23.95.190.40:3128
