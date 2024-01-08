@@ -1,0 +1,1 @@
+wget "https://scontent.whatsapp.net/v/t61.25591-34/10000000_1728969997617726_6084524712059997163_n.apk/WhatsApp.apk?ccb=1-7&_nc_sid=c49adc&_nc_ohc=fGAivhyeAzIAX80KJjl&_nc_oc=AQmTMC5BeYysxXnNhXyYMcwEKLcVQ1ZAR_z4JTMD3ektQ78ykrvofiXicsn058_tu84&_nc_ht=scontent.whatsapp.net&oh=01_AdRKXUoDVhaaX2-moLEyhYI019DL0Z0tubXZMDK8GeahmA&oe=65C0F50E" -O WhatsApp.apk

@@ -1,0 +1,33 @@
+[35m[Appium][39m Welcome to Appium v2.4.1
+[35m[Appium][39m The autodetected Appium home path: /root/.appium
+[35m[Appium][39m Appium REST http interface listener started on http://0.0.0.0:4723
+[35m[Appium][39m You can provide the following URLs in your client code to connect to this server:
+[35m[Appium][39m 	http://127.0.0.1:4723/ (only accessible from the same host)
+[35m[Appium][39m 	http://65.109.113.62:4723/
+[35m[Appium][39m 	http://172.17.0.1:4723/
+[35m[Appium][39m No drivers have been installed in /root/.appium. Use the "appium driver" command to install the one(s) you want to use.
+[35m[Appium][39m No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+[38;5;0m[HTTP][0m [37m-->[39m [37mGET[39m [37m/[39m
+[38;5;0m[HTTP][0m [90m{}[39m
+[38;5;0m[HTTP][0m No route found for /
+[38;5;0m[HTTP][0m [37m<-- GET / [39m[33m404[39m [90m7 ms - 211[39m
+[38;5;0m[HTTP][0m [90m[39m
+[38;5;0m[HTTP][0m [37m-->[39m [37mGET[39m [37m/[39m
+[38;5;0m[HTTP][0m [90m{}[39m
+[38;5;0m[HTTP][0m No route found for /
+[38;5;0m[HTTP][0m [37m<-- GET / [39m[33m404[39m [90m5 ms - 211[39m
+[38;5;0m[HTTP][0m [90m[39m
+[38;5;0m[HTTP][0m [37m-->[39m [37mGET[39m [37m/wd/hub[39m
+[38;5;0m[HTTP][0m [90m{}[39m
+[38;5;0m[HTTP][0m No route found for /wd/hub
+[38;5;0m[HTTP][0m [37m<-- GET /wd/hub [39m[33m404[39m [90m1 ms - 211[39m
+[38;5;0m[HTTP][0m [90m[39m
+[38;5;0m[HTTP][0m [37m-->[39m [37mGET[39m [37m/wd/hub[39m
+[38;5;0m[HTTP][0m [90m{}[39m
+[38;5;0m[HTTP][0m No route found for /wd/hub
+[38;5;0m[HTTP][0m [37m<-- GET /wd/hub [39m[33m404[39m [90m1 ms - 211[39m
+[38;5;0m[HTTP][0m [90m[39m
+[35m[Appium][39m Received SIGTERM - shutting down
+[38;5;16m[AppiumDriver@1e64][0m There are no active sessions for cleanup
+[38;5;0m[HTTP][0m Waiting until the server is closed
+[38;5;0m[HTTP][0m Received server close event

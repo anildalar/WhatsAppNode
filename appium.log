@@ -1,0 +1,10 @@
+nohup: ignoring input
+[35m[Appium][39m Welcome to Appium v2.4.1
+[35m[Appium][39m The autodetected Appium home path: /root/.appium
+[38;5;0m[HTTP][0m Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+[35m[Appium][39m Could not configure Appium server. It's possible that a driver or plugin tried to update the server and failed. Original error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+[35m[Appium][39m Error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+[35m[Appium][39m     at Server.setupListenHandle [as _listen2] (node:net:1740:16)
+[35m[Appium][39m     at listenInCluster (node:net:1788:12)
+[35m[Appium][39m     at doListen (node:net:1937:7)
+[35m[Appium][39m     at processTicksAndRejections (node:internal/process/task_queues:83:21)
