@@ -18,8 +18,8 @@ app.use(express.json());
 
 var con = mysql.createConnection({
     host: "localhost",
-    user: "whatsapp_user",
-    password: "password@332211", 
+    user: "root",
+    password: "ubuntu", 
     database: "whatsapp_db"
   });
 
@@ -565,7 +565,7 @@ app.get('/api/register',(req,res)=>{
     });
    
 });
-let port = process.env.PORT || 3000;
+let port = 10000;
 app.listen(port,()=>{
     console.log('The server listening on port ,',port);
 });
@@ -660,7 +660,7 @@ function createCont2(cc,number,wa_number,proip,proport,proid,Container_port,cli_
                                                                 inputCC.on('exit', function (code9) {
                                                                     setTimeout(function(){
                                                                         inputNumber = spawn('docker', ['exec',contname3,'adb','-s','emulator-5554','shell','input','text',number]); 
-                                                                        inputNumber.stdout.on('data', function (data10) {
+                                                                       inputNumber.stdout.on('data', function (data10) {
                                                                             console.log('stdoutagrre10: ' + data10.toString());
                                                                             var text10 = data10.toString();
                                                                         });

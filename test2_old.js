@@ -152,54 +152,31 @@ function createCont2(cc,numb,wa_number,proip,proport,proid,port1,port2,port3,por
                 //console.log('stderr: ' + data.toString());
               });
               movefile.on('exit', function (code) {
-                  setTimeout(function(){
-                      var adbKill ;
-                      adbKill = spawn('docker', ['exec',contname3,'adb','kill-server']);
-                      adbKill.stdout.on('data', function (data) {
-                          console.log('data Move  Whatsapp' ,data);
-                      });
-                      adbKill.stderr.on('data', function (data) {   
-                        //console.log('stderr: ' + data.toString());
-                      });
-                      adbKill.on('exit', function (code) {
-                          setTimeout(function () { 
-                            var adbStart ;
-                            adbStart = spawn('docker', ['exec',contname3,'adb','start-server']);
-                            adbStart.stdout.on('data', function (data) {
-                                console.log('data Move  Whatsapp' ,data);
-                            });
-                            adbStart.stderr.on('data', function (data) {   
-                              //console.log('stderr: ' + data.toString());
-                            });
-                            adbStart.on('exit', function (code) {
-                              setTimeout(function () {
-                                  reinstallapk(contname3,wa_number,port2);
-                                  function reinstallapk(contname3,wa_number,port2){
-                                    var apkinstall;
-                                    apkinstall = spawn('docker', ['exec',contname3,'adb','install','/wp.apk']);
-                                    apkinstall.stdout.on('data', function (data3) {
-                                        var text2 = data3.toString();
-                                        console.log('instaling: ' + data3.toString());
-                                        if( text2.search(/Success/i) !== -1){
-                                            console.log('Success Installed: ' + data3.toString());
-                                            console.log('All data Here ',cc,numb,wa_number,proip,proport,proid,port1,port2,port3,port4 );
-                                            runTest(wa_number,port2);
-                                        }else{
-                                            console.log('not Installed APk');
-                                        }
-                                    });
-                                    apkinstall.stderr.on('data', function (data3) {
-                                        console.log('stderr: ' + data3.toString());
-                                    });
-                                    apkinstall.on('exit', function (code3) {
-                                        console.log('child IN installing APK ' + code3.toString());
-                                    });
-                                  }
-                              },4000);
-                            });
-                          },4000);
-                      });
-                  },3000) 
+                  setTimeout(function () {
+                      reinstallapk(contname3,wa_number,port2);
+                      function reinstallapk(contname3,wa_number,port2){
+                        var apkinstall;
+                        apkinstall = spawn('docker', ['exec',contname3,'adb','install','/wp.apk']);
+                        apkinstall.stdout.on('data', function (data3) {
+                            var text2 = data3.toString();
+                            console.log('instaling: ' + data3.toString());
+                            if( text2.search(/Success/i) !== -1){
+                                console.log('Success Installed: ' + data3.toString());
+                                console.log('All data Here ',cc,numb,wa_number,proip,proport,proid,port1,port2,port3,port4 );
+                                runTest(wa_number,port2);
+                            }else{
+                                console.log('not Installed APk');
+                            }
+                        });
+                        apkinstall.stderr.on('data', function (data3) {
+                            console.log('stderr: ' + data3.toString());
+                        });
+                        apkinstall.on('exit', function (code3) {
+                            console.log('child IN installing APK ' + code3.toString());
+                        });
+                      }
+    
+                  },4000);
               });
             },20000);
         });
