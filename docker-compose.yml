@@ -1,14 +1,14 @@
 version: '2.2'
 services:
-  nexus917999452755:
-    image: budtmo/docker-android-x86-7.1.1
-    container_name: c7999452755
+  nexus917999452713:
+    image: dmtrbrlkv/docker-android-x86-7.1.1
+    container_name: c7999452713
     privileged: true
     ports:
-      - '7423:6080'
-      - '4928:4723'
-      - '5730:5554'
-      - '55730:5555'
+      - '6083:6080'
+      - '4726:4723'
+      - '5557:5554'
+      - '55558:5555'
     volumes:
       - $PWD/example/sample_apk:/root/tmp/sample_apk
       - ./video-nexus_7.1.1:/tmp/video
@@ -17,4 +17,4 @@ services:
       - CONNECT_TO_GRID=true
       - APPIUM=true
       - SELENIUM_HOST=selenium_hub
-      - HTTPS_PROXY=http://172.121.142.60:3128
+      - HTTPS_PROXY=http://192.177.163.8:3128

@@ -15,9 +15,9 @@ app.use(express.json());
 
 
 var con = mysql.createConnection({
-  host: "localhost",
+  host: "127.0.0.1",
   user: "root",
-  password: "ubuntu", 
+  password: "anil789", 
   database: "appium_whatsapp_db"
 });
 
@@ -109,7 +109,7 @@ function createCont(cc,numb,wa_number,proip,proport,proid){
 function createCont2(cc,numb,wa_number,proip,proport,proid,port1,port2,port3,port4,oldservice){
   var contname3 = 'c'+numb+''; 
 
-  const composeFile = '/WhatsAppNode/docker-compose.yml';
+  const composeFile = '/home/ziya/WhatsAppNode/docker-compose.yml';
   fs.readFile(composeFile, 'utf8', (err, data) => {
     if (err) {
       console.error(`Error reading ${composeFile}: ${err}`);
